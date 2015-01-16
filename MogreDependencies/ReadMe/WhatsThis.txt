@@ -1,0 +1,23 @@
+﻿This project has no purpose of its own, it's merely used to pull in
+all of the unmanaged Mogre dependencies so that they don't clutter up
+the projects you're actively working in.
+
+Simply add a reference to this project in any other project that uses
+mogre and the dependencies will automatically be copied into the output
+directory of the referencing project.
+
+------------------------------------------------------------------------------
+
+PRO tip:
+
+If you don't want to have a useless 'MogreDependencies.dll' sitting
+around in your final build, you can invert the dependency: reference
+your main game executable project from the MogreDependencies project.
+
+You can then pick up the complete build in the bin directory of this
+project and delete MogreDependencies.dll.
+
+
+Personally, I'd just rename MogreDependencies to MogreHelper or something
+and use it to collect common Mogre helper code I write. I like to keep
+my build process as vanilla and stupid as possible ;-)
